@@ -2,14 +2,14 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <title>Hugo Deploy Example</title>
+  <title>{{ .Title }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
   <link rel="stylesheet" href="/css/all.css">
 </head>
 <body>
 
 <section class="box">
-  <h1>Hugo Deploy Example</h1>
+  <h1>{{ .Title }}</h1>
 
   <p>This site was deployed to Amazon S3 automatically with CircleCI.</p>
   {{ "go" | highlight "awesome := true" }}
