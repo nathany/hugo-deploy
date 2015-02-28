@@ -4,8 +4,6 @@ This is an starting point for a [Hugo](http://gohugo.io/) blog with deployment t
 
 This is how I deploy [Edmonton Go](https://edmontongo.org/), [fsnotify.org](https://fsnotify.org/) and [Lua Nova](https://luanova.org/).
 
-Deploys happen automatically whenever changes are merged to the master branch on GitHub. In my experience, deploys take about 30 seconds to complete.
-
 ## Requirements
 
 Local development:
@@ -31,6 +29,12 @@ Remote:
 * A script to watch for file changes in development and include drafts in the output. Run `./watch.sh`.
 * `.gitignore` to avoid committing the generated sass or static files.
 * Various files that CircleCI uses during deployment (`circle.yml`, `ci-install-hugo.sh`, `ci-install-sassc`, `requirements.txt`)
+
+### Deployment
+
+CircleCI automatically deploys the website when changes are merged to the master branch on GitHub. In my experience, deploys take about 30 seconds to complete.
+
+* [hugo-deploy.s3-website-us-east-1.amazonaws.com](http://hugo-deploy.s3-website-us-east-1.amazonaws.com/) is the website endpoint on Amazon S3.
 
 ## TODO
 
