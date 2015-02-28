@@ -24,7 +24,7 @@ Remote:
 * DNS configured to point to S3. 
     * [CloudFlare](https://www.cloudflare.com/) is recommend for HTTPS (free).
 
-## Files
+## What Is Provided?
 
 * `hugo new site <mysite>` creates a config.toml and a few empty folders. I've added .gitkeep files so those folders are checked in.
 * A sass folder with `all.sass` that will be converted to `static/css/all.css`.
