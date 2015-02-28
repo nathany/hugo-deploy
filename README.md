@@ -31,3 +31,8 @@ Remote:
 * A script to watch for file changes in development and include drafts in the output. Run `./watch.sh`.
 * `.gitignore` to avoid committing the generated sass or static files.
 * Various files that CircleCI uses during deployment (`circle.yml`, `ci-install-hugo.sh`, `ci-install-sassc`, `requirements.txt`)
+
+## TODO
+
+* Write a step-by-step blog post to set this up.
+
