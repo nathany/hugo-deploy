@@ -20,4 +20,4 @@ test:
     - sassc sass/all.sass static/css/all.css --style compressed
     - hugo -v
   post:
-    - if [ $CIRCLE_BRANCH == 'master' ]; then s3up -source=public/ -bucket=$BUCKET -key=$AWS_ACCESS_KEY_ID -secret=$AWS_SECRET_ACCESS_KEY ; fi
+    - if [ $CIRCLE_BRANCH == 'master' ]; then s3up -source=public/ -bucket=$BUCKET ; fi
