@@ -27,7 +27,7 @@ Remote:
 ## What Is Provided?
 
 * `hugo new site <mysite>` creates a config.toml and a few empty folders. I've added .gitkeep files so those folders are checked in.
-* A sass folder with `all.sass` that will be converted to `static/css/all.css`.
+* A sass folder with `all.sass` that will be converted to `static/all.css`.
 * A script to watch for file changes in development and include drafts in the output. Run `./watch.sh`.
 * `.gitignore` to avoid committing the generated sass or static files.
 * Various files that CircleCI uses during deployment (`circle.yml`, `ci-install-hugo.sh`, `ci-install-sassc`, `requirements.txt`)
