@@ -19,5 +19,9 @@ test:
   override:
     - sassc sass/all.sass static/all.css --style compressed
     - hugo -v
-  post:
-    - if [ $CIRCLE_BRANCH == 'master' ]; then s3up -source=public/ -bucket=$BUCKET ; fi
+
+deployment:
+  s3up:
+    branch: master
+    commands:
+      - s3up -source=public/ -bucket=$BUCKET
