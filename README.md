@@ -4,7 +4,7 @@
 
 This is an starting point for a [Hugo](http://gohugo.io/) blog with deployment to [Amazon S3](http://aws.amazon.com/s3/) via [CircleCI](https://circleci.com/).
 
-It's how I deploy [Edmonton Go](https://edmontongo.org/), [fsnotify.org](https://fsnotify.org/) and [Lua Nova](https://luanova.org/).
+It's how I deploy [nathany.com](https://nathany.com/), [Edmonton Go](https://edmontongo.org/), [fsnotify.org](https://fsnotify.org/) and [Lua Nova](https://luanova.org/).
 
 ## Requirements
 
