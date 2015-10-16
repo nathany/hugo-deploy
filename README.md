@@ -13,7 +13,7 @@ Local development:
 * Install the `hugo` binary, download it at [gohugo.io](http://gohugo.io/).
 * Install [sassc](https://github.com/sass/sassc) to use [Sass](http://sass-lang.com/) for stylesheets.
   * On Mac use: `brew install sassc`
-  * SassC doesn't watch for file changes, but if you have Go installed, you can use [Reflex](https://github.com/cespare/reflex).
+  * SassC doesn't watch for file changes, but if you have Go installed, you can use [cmd/notify](https://github.com/rjeczalik/cmd).
 * Install [Pygments](http://pygments.org/) if you want to use [syntax highlighting](http://gohugo.io/extras/highlighting/).
 
 Remote:
