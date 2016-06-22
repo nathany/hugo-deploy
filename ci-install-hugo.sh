@@ -1,11 +1,11 @@
-HUGO_VERSION=0.15
+HUGO_VERSION=0.16
+HUGO_DOWNLOAD=hugo_${HUGO_VERSION}_linux-64bit.tgz
 
 set -x
 set -e
 
 # Install Hugo if not already cached or upgrade an old version.
 if [ ! -e $CIRCLE_BUILD_DIR/bin/hugo ] || ! [[ `hugo version` =~ v${HUGO_VERSION} ]]; then
-  wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_linux_amd64.tar.gz
-  tar xvzf hugo_${HUGO_VERSION}_linux_amd64.tar.gz
-  cp hugo_${HUGO_VERSION}_linux_amd64/hugo_${HUGO_VERSION}_linux_amd64 $CIRCLE_BUILD_DIR/bin/hugo
+  wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_DOWNLOAD}
+  tar xvzf ${HUGO_DOWNLOAD} -C $CIRCLE_BUILD_DIR/bin/
 fi
