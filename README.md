@@ -14,7 +14,7 @@ Local development:
 * Install [sassc](https://github.com/sass/sassc) to use [Sass](http://sass-lang.com/) for stylesheets.
   * On Mac use: `brew install sassc`
   * SassC doesn't watch for file changes, but if you have Go installed, you can use [cmd/notify](https://github.com/rjeczalik/cmd).
-* Install [Pygments](http://pygments.org/) if you want to use [syntax highlighting](http://gohugo.io/extras/highlighting/). NOTE: Hugo v0.15 is required to syntax highlight GitHub-style fenced code blocks.
+* Install [Pygments](http://pygments.org/) if you want to use [syntax highlighting](http://gohugo.io/extras/highlighting/). NOTE: Hugo v0.15+ is required to syntax highlight GitHub-style fenced code blocks.
 
 Remote:
 

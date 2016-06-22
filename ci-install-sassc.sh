@@ -1,4 +1,4 @@
-SASS_VERSION=3.3.2
+SASS_VERSION=3.3.6
 
 set -x
 set -e
