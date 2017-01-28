@@ -1,5 +1,5 @@
-HUGO_VERSION=0.16
-HUGO_DOWNLOAD=hugo_${HUGO_VERSION}_linux-64bit.tgz
+HUGO_VERSION=0.18.1
+HUGO_DOWNLOAD=hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 
 set -x
 set -e
