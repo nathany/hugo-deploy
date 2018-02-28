@@ -14,8 +14,6 @@ dependencies:
     - bin
 
 test:
-  pre:
-    - pygmentize -V
   override:
     - sassc sass/all.sass static/all.css --style compressed
     - hugo -v
