@@ -8,5 +8,5 @@ set -e
 if [ ! -e $CIRCLE_BUILD_DIR/bin/hugo ] || ! [[ `hugo version` =~ v${HUGO_VERSION} ]]; then
   wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_DOWNLOAD}
   tar xvzf ${HUGO_DOWNLOAD} hugo
-  mv  hugo $CIRCLE_BUILD_DIR/bin/hugo
+  mv hugo $CIRCLE_BUILD_DIR/bin/hugo
 fi
