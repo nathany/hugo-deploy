@@ -9,7 +9,7 @@ dependencies:
   pre:
     - bash ./ci-install-sassc.sh
     - bash ./ci-install-hugo.sh
-    - go get -v github.com/nathany/s3up
+    - go get -v github.com/bep/s3deploy
   cache_directories:
     - bin
 
@@ -19,7 +19,7 @@ test:
     - hugo -v
 
 deployment:
-  s3up:
+  s3deploy:
     branch: master
     commands:
-      - s3up -source=public/ -bucket=$BUCKET
+      - s3deploy -source=public/ -bucket=$BUCKET
