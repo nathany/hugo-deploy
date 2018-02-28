@@ -2,7 +2,7 @@
 
 [![Circle CI](https://circleci.com/gh/nathany/hugo-deploy.svg?style=svg)](https://circleci.com/gh/nathany/hugo-deploy)
 
-This is an starting point for a [Hugo](http://gohugo.io/) blog with deployment to [Amazon S3](http://aws.amazon.com/s3/) via [CircleCI](https://circleci.com/) and [s3up](https://github.com/nathany/s3up).
+This is an starting point for a [Hugo](http://gohugo.io/) blog with deployment to [Amazon S3](http://aws.amazon.com/s3/) via [CircleCI](https://circleci.com/) and [s3deploy](https://github.com/bep/s3deploy).
 
 It's how I deploy [nathany.com](https://nathany.com/), [Edmonton Go](https://edmontongo.org/), [fsnotify.org](https://fsnotify.org/) and [Lua Nova](https://luanova.org/).
 
