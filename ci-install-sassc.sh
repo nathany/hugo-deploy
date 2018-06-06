@@ -1,4 +1,4 @@
-SASS_VERSION=3.4.8
+SASS_VERSION=3.5.0
 
 set -x
 set -e
@@ -9,8 +9,8 @@ if [ ! -e $CIRCLE_BUILD_DIR/bin/sassc ] || ! [[ `sassc -v` =~ "libsass: ${SASS_V
   mkdir -p $SASS_BUILD_DIR
   cd $SASS_BUILD_DIR
 
-  git clone --recursive https://github.com/sass/libsass.git -b ${SASS_VERSION}
-  git clone https://github.com/sass/sassc.git -b ${SASS_VERSION}
+  git clone --recursive --depth 1 https://github.com/sass/libsass.git -b ${SASS_VERSION}
+  git clone --depth 1 https://github.com/sass/sassc.git -b ${SASS_VERSION}
 
   cd sassc
   SASS_LIBSASS_PATH=$SASS_BUILD_DIR/libsass make

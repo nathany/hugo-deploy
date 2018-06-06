@@ -22,4 +22,4 @@ deployment:
   s3deploy:
     branch: master
     commands:
-      - s3deploy -source=public/ -bucket=$BUCKET
+      - s3deploy -source=public/ -bucket=$BUCKET -region=us-east-1
