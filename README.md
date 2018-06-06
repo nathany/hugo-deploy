@@ -33,6 +33,6 @@ Remote:
 
 ### Deployment
 
-CircleCI automatically deploys the website when changes are merged to the master branch on GitHub. In my experience, deploys take about 30-40 seconds to complete after the initial run.
+CircleCI automatically deploys the website when changes are merged to the master branch on GitHub. In my experience, deploys take a few seconds to complete after the initial run.
 
 * [hugo-deploy.s3-website-us-east-1.amazonaws.com](http://hugo-deploy.s3-website-us-east-1.amazonaws.com/) is the website endpoint on Amazon S3.
