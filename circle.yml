@@ -9,7 +9,7 @@ dependencies:
   pre:
     - bash ./ci-install-sassc.sh
     - bash ./ci-install-hugo.sh
-    - go get -v github.com/bep/s3deploy
+    - bash ./ci-install-s3deploy.sh
   cache_directories:
     - bin
 
