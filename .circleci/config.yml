@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/golang:latest
         environment:
-          HUGO_VERSION: 0.41
+          HUGO_VERSION: 0.42.2
           SASS_VERSION: 3.5.0
           LIBSASS_VERSION: 3.5.4
           S3DEPLOY_VERSION: 2.0.2
