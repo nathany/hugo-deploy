@@ -1,4 +1,4 @@
-HUGO_DOWNLOAD=hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
+HUGO_DOWNLOAD=hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
 
 set -x
 set -e

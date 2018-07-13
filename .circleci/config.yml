@@ -4,9 +4,7 @@ jobs:
     docker:
       - image: circleci/golang:latest
         environment:
-          HUGO_VERSION: 0.42.2
-          SASS_VERSION: 3.5.0
-          LIBSASS_VERSION: 3.5.4
+          HUGO_VERSION: 0.44
           S3DEPLOY_VERSION: 2.0.2
     steps:
       - checkout
@@ -21,18 +19,12 @@ jobs:
           name: Install Hugo
           command: ./ci-install-hugo.sh
       - run:
-          name: Install SassC
-          command: ./ci-install-sassc.sh
-      - run:
           name: Install s3deploy
           command: ./ci-install-s3deploy.sh
       - save_cache:
           key: install-v1-{{ checksum ".circleci/config.yml" }}
           paths:
             - /home/circleci/bin
-      - run:
-          name: Sass Build
-          command: $HOME/bin/sassc sass/all.sass static/all.css --style compressed
       - run:
           name: Hugo Build
           command: $HOME/bin/hugo -v --destination workspace/public

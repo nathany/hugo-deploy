@@ -4,16 +4,14 @@
 
 This is an starting point for a [Hugo](https://gohugo.io/) blog with deployment to [Amazon S3](https://aws.amazon.com/s3/) via [CircleCI](https://circleci.com/) and [s3deploy](https://github.com/bep/s3deploy).
 
-It's how I deploy [nathany.com](https://nathany.com/), [Edmonton Go](https://edmontongo.org/), [fsnotify.org](https://fsnotify.org/) and [Lua Nova](https://luanova.org/).
+It's how I deploy [nathany.com](https://nathany.com/), [Edmonton Go](https://edmontongo.org/), and [fsnotify.org](https://fsnotify.org/).
 
 ## Requirements
 
 Local development:
 
 * Install the `hugo` binary, download it at [gohugo.io](https://gohugo.io/).
-* Install [sassc](https://github.com/sass/sassc) to use [Sass](https://sass-lang.com/) for stylesheets.
-  * On Mac use: `brew install sassc`
-  * SassC doesn't watch for file changes, but if you have Go installed, you can use [cmd/notify](https://github.com/rjeczalik/cmd).
+  * On Mac use [Homebrew](https://brew.sh/): `brew install hugo`
 
 Remote:
 
@@ -26,10 +24,10 @@ Remote:
 ## What Is Provided?
 
 * `hugo new site <mysite>` creates a config.toml and a few empty folders. I've added .gitkeep files so those folders are checked in.
-* A sass folder with `all.sass` that will be converted to `static/all.css`.
+* An `assets/sass` folder with `all.sass` that will be converted to css.
 * A script to watch for file changes in development and include drafts in the output. Run `./watch.sh`.
 * `.gitignore` to avoid committing the generated files.
-* Various files that CircleCI uses during deployment (`circle.yml`, `ci-install-hugo.sh`, `ci-install-sassc`, `requirements.txt`)
+* Various files that CircleCI uses during deployment (`.circleci/config.yml`, `ci-install-hugo.sh`, `ci-install-s3deploy.sh`).
 
 ### Deployment
 
