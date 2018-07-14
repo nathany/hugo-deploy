@@ -46,7 +46,7 @@ jobs:
           at: workspace
       - run:
           name: Deploy to S3
-          command: $HOME/bin/s3deploy -source=workspace/public/ -bucket=$BUCKET -region=us-east-1
+          command: $HOME/bin/s3deploy -source=workspace/public/ -bucket=$BUCKET -region=ca-central-1
 
 workflows:
   version: 2
