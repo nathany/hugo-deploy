@@ -30,7 +30,6 @@ Remote:
 * Various files that CircleCI uses during deployment (`.circleci/config.yml`, `ci-install-hugo.sh`, `ci-install-s3deploy.sh`).
 
 ### Deployment
-
 CircleCI automatically deploys the website when changes are merged to the master branch on GitHub. In my experience, deploys take a few seconds to complete after the initial run.
 
-* [hugo-deploy.s3-website-us-east-1.amazonaws.com](http://hugo-deploy.s3-website-us-east-1.amazonaws.com/) is the website endpoint on Amazon S3.
+* [hugo-deploy-example.s3-website.ca-central-1.amazonaws.com](http://hugo-deploy-example.s3-website.ca-central-1.amazonaws.com) is the website endpoint on Amazon S3.

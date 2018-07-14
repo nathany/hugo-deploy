@@ -1,3 +1,3 @@
-baseurl = "http://hugo-deploy.s3-website-us-east-1.amazonaws.com/"
+baseurl = "http://hugo-deploy-example.s3-website.ca-central-1.amazonaws.com/"
 languageCode = "en-us"
 title = "Hugo Deploy Example"
