@@ -1,6 +1,6 @@
 # Hugo Deploy
 
-This is an starting point for a [Hugo](https://gohugo.io/) blog with deployment to [Amazon S3](https://aws.amazon.com/s3/) via [GitHub Actions](https://github.com/features/actions) and [s3deploy](https://github.com/bep/s3deploy).
+This is an starting point for a [Hugo](https://gohugo.io/) blog with deployment to [Amazon S3](https://aws.amazon.com/s3/) via [GitHub Actions](https://github.com/features/actions).
 
 It's how I deploy [nathany.com](https://nathany.com/), [Edmonton Go](https://edmontongo.org/), and [fsnotify.org](https://fsnotify.org/).
 
