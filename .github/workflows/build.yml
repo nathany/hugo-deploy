@@ -14,17 +14,11 @@ jobs:
         run: ./ci-install-hugo.sh
         env:
           HUGO_VERSION: 0.58.2
-      - name: Install s3deploy
-        run: ./ci-install-s3deploy.sh
-        env:
-          S3DEPLOY_VERSION: 2.3.2
       - name: Hugo Build
-        run: $HOME/bin/hugo -v --destination public
+        run: $HOME/bin/hugo -v
       - name: Deploy to S3
-        if: github.ref == 'refs/heads/master'
-        run: $HOME/bin/s3deploy -source=public/ -bucket=$BUCKET -region=$REGION -public-access
+        # if: github.ref == 'refs/heads/master'
+        run: $HOME/bin/hugo -v deploy
         env:
-          BUCKET: hugo-deploy-example
-          REGION: ca-central-1
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}

@@ -1,3 +1,19 @@
 baseurl = "http://hugo-deploy-example.s3-website.ca-central-1.amazonaws.com/"
 languageCode = "en-us"
 title = "Hugo Deploy Example"
+
+[deployment]
+order = [".png$", ".jpg$", ".gif$", ".svg$"]
+
+[[deployment.targets]]
+URL = "s3://hugo-deploy-example?region=ca-central-1"
+
+[[deployment.matchers]]
+# Cache static assets for 20 years.
+pattern = "^.+\\.(js|css|png|jpg|gif|svg|ttf)$"
+cacheControl = "max-age=630720000, no-transform, public"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(html|xml|json)$"
+gzip = true
