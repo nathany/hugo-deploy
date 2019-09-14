@@ -1,0 +1,30 @@
+name: Build and Deploy
+
+on: push
+
+jobs:
+  build:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Make bin folder
+        run: mkdir -p $HOME/bin
+      - name: Install Hugo
+        run: ./ci-install-hugo.sh
+        env:
+          HUGO_VERSION: 0.58.2
+      - name: Install s3deploy
+        run: ./ci-install-s3deploy.sh
+        env:
+          S3DEPLOY_VERSION: 2.3.2
+      - name: Hugo Build
+        run: $HOME/bin/hugo -v --destination public
+      - name: Deploy to S3
+        if: github.ref == 'master'
+        run: $HOME/bin/s3deploy -source=public/ -bucket=$BUCKET -region=$REGION -public-access
+        env:
+          BUCKET: hugo-deploy-example
+          REGION: ca-central-1
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
