@@ -8,17 +8,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Make bin folder
-        run: mkdir -p $HOME/bin
       - name: Install Hugo
-        run: ./ci-install-hugo.sh
+        run: |
+          HUGO_DOWNLOAD=hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
+          wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_DOWNLOAD}
+          tar xvzf ${HUGO_DOWNLOAD} hugo
+          mv hugo $HOME/hugo
         env:
           HUGO_VERSION: 0.58.2
       - name: Hugo Build
-        run: $HOME/bin/hugo -v
+        run: $HOME/hugo -v
       - name: Deploy to S3
-        # if: github.ref == 'refs/heads/master'
-        run: $HOME/bin/hugo -v deploy
+        if: github.ref == 'refs/heads/master'
+        run: $HOME/hugo -v deploy
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
