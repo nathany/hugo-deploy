@@ -24,9 +24,31 @@ Remote:
 * An `assets/sass` folder with `all.sass` that will be converted to css.
 * A script to watch for file changes in development and include drafts in the output. Run `./watch.sh`.
 * `.gitignore` to avoid committing the generated files.
-* Various files that GitHub Actions uses during deployment (`.github/workflows/build.yml`, `ci-install-hugo.sh`, `ci-install-s3deploy.sh`).
+* Workflow file that GitHub Actions uses for deployment (`.github/workflows/build.yml`).
 
 ### Deployment
 GitHub Actions automatically deploy the website when changes are merged to the master branch on GitHub. In my experience, deploys take a few seconds to complete.
 
 * [hugo-deploy-example.s3-website.ca-central-1.amazonaws.com](http://hugo-deploy-example.s3-website.ca-central-1.amazonaws.com) is the website endpoint on Amazon S3.
+
+This [bucket policy provides public access](https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteAccessPermissionsReqd.html) to the files in S3.
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::hugo-deploy-example/*"
+            ]
+        }
+    ]
+}
+```
+
