@@ -21,6 +21,7 @@ jobs:
       - name: Hugo Build
         run: $HOME/bin/hugo -v --destination public
       - name: Deploy to S3
+        if: github.ref == 'master'
         run: $HOME/bin/s3deploy -source=public/ -bucket=$BUCKET -region=$REGION -public-access
         env:
           BUCKET: hugo-deploy-example
