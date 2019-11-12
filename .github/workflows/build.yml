@@ -15,7 +15,7 @@ jobs:
           tar xvzf ${HUGO_DOWNLOAD} hugo
           mv hugo $HOME/hugo
         env:
-          HUGO_VERSION: 0.58.2
+          HUGO_VERSION: 0.59.1
       - name: Hugo Build
         run: $HOME/hugo -v
       - name: Deploy to S3
