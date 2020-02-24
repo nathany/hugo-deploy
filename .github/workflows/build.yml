@@ -12,8 +12,8 @@ jobs:
         run: |
           HUGO_DOWNLOAD=hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz
           wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/${HUGO_DOWNLOAD}
-          tar xvzf ${HUGO_DOWNLOAD} hugo
-          mv hugo $HOME/hugo
+          tar xvzf ${HUGO_DOWNLOAD} hugo-bin
+          mv hugo-bin $HOME/hugo
         env:
           HUGO_VERSION: 0.59.1
       - name: Hugo Build
